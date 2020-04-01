@@ -6,6 +6,9 @@ namespace SpiralArray
     {
         static void Main(string[] args)
         {
+            /*
+             * 2D Spiral Array
+             */
             SpiralArray spiral = new SpiralArray();
             var result = spiral.GetSpiral(4);
 
