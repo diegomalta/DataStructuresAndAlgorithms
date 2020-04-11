@@ -18,19 +18,14 @@ namespace MyTree
             {
                 Value = value;
             }
-
         }
 
         private Node Root;
 
-        public MyTree()
-        {
-        }
-
         public void Add(int value)
         {
             var newNode = new Node(value);
-            if(Root == null)
+            if (Root == null)
             {
                 Root = newNode;
                 return;
@@ -60,9 +55,53 @@ namespace MyTree
             }
         }
 
-        public bool Find (int value)
+        public bool Find(int value)
         {
-            return true;
+            return Find(Root, value);
+        }
+
+        private bool Find(Node node, int value)
+        {
+            if (node == null)
+                return false;
+            if (node.Value == value)
+                return true;
+
+            if (value > node.Value)
+                return Find(node.Rigth, value);
+            else
+                return Find(node.Left, value);
+        }
+
+        public void PrintPreOrder()
+        {
+            PrintPreOrder(Root);
+        }
+
+        private void PrintPreOrder (Node root)
+        {
+            if (root == null)
+                return;
+
+            Console.WriteLine(root.Value);
+
+            PrintPreOrder(root.Left);
+            PrintPreOrder(root.Rigth);
+        }
+
+        public void PrintInOrder()
+        {
+            PrintInOrder(Root);
+        }
+
+        private void PrintInOrder (Node root)
+        {
+            if (root == null)
+                return;
+
+            PrintInOrder(root.Left);
+            Console.WriteLine(root.Value);
+            PrintInOrder(root.Rigth);
         }
     }
 }
