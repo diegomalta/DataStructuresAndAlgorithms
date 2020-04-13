@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-
+﻿
 namespace MyTree
 {
     class Program
@@ -14,8 +12,8 @@ namespace MyTree
           4      9
          / \    /  \
         1   6  8   10
-
-4
+                     \
+                      11
 */
 
 
@@ -27,16 +25,17 @@ namespace MyTree
             tree.Add(6);
             tree.Add(8);
             tree.Add(10);
+            tree.Add(11);
 
 
-            var tree2 = new MyTree();
-            tree2.Add(7);
-            tree2.Add(4);
-            tree2.Add(9);
-            tree2.Add(1);
-            tree2.Add(6);
-            tree2.Add(8);
-            tree2.Add(10);
+            // var tree2 = new MyTree();
+            // tree2.Add(7);
+            // tree2.Add(4);
+            // tree2.Add(9);
+            // tree2.Add(1);
+            // tree2.Add(6);
+            // tree2.Add(8);
+            // tree2.Add(10);
 
             //tree.PrintPreOrder();
             //tree.PrintInOrder();
@@ -44,8 +43,10 @@ namespace MyTree
             // Console.WriteLine(tree.Height());
             // Console.WriteLine(tree.Min());
             // Console.WriteLine(tree.AreEquals(tree2));
-            Console.WriteLine(tree.ValidateBST());
-            
+            // Console.WriteLine(tree.ValidateBST());
+            // tree.PrintNodeAtKLevel(2);
+            tree.PrintAvgPerLevel();
+
         }
     }
 }

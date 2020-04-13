@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MyTree
 {
@@ -189,6 +190,7 @@ namespace MyTree
 
         #endregion
 
+        #region ValidateBST
         public bool ValidateBST()
         {
             return ValidateBST(Root, int.MinValue, int.MaxValue);
@@ -197,11 +199,71 @@ namespace MyTree
         {
             if (node == null)
                 return true;
-            
+
             if (node.Value <= lower || node.Value >= upper)
                 return false;
 
             return ValidateBST(node.Left, lower, node.Value) && ValidateBST(node.Rigth, node.Value, upper);
         }
+        #endregion
+
+        #region PrintNodeAtKLevel
+        public void PrintNodeAtKLevel(int k)
+        {
+            PrintNodeAtKLevel(Root, 0, k);
+        }
+
+        private void PrintNodeAtKLevel(Node root, int level, int k)
+        {
+            if (root == null)
+                return;
+
+            if (k == level)
+            {
+                Console.WriteLine(root.Value);
+                return;
+            }
+
+            PrintNodeAtKLevel(root.Left, level + 1, k);
+            PrintNodeAtKLevel(root.Rigth, level + 1, k);
+        }
+        #endregion
+
+        #region Avg-at-level
+
+        public void PrintAvgPerLevel()
+        {
+            var dic = new Dictionary<int, List<int>>();
+            CollectValues(Root, 0, dic);
+
+            foreach (var item in dic)
+            {
+                var list = item.Value;
+                var total = list.Sum() / list.Count;
+                Console.WriteLine($"Level: {item.Key} Avg: {total}");
+            }
+        }
+
+        private void CollectValues(Node root, int level, Dictionary<int , List<int>> dic)
+        {
+            if (root == null)
+                return;
+            
+            if (dic.GetValueOrDefault(level) == null)
+            {
+                dic[level] = new List<int> { root.Value };
+            }
+            else
+            {
+                var list = dic[level];
+                list.Add(root.Value);
+                dic[level] = list;
+            }
+
+            CollectValues(root.Left, level + 1, dic);
+            CollectValues(root.Rigth, level + 1, dic);
+        }
+
+        #endregion
     }
 }
