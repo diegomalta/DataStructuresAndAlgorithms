@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SortingAlgorithms
 {
@@ -9,6 +10,9 @@ namespace SortingAlgorithms
             var array = new int[] { 6, 2, 9, 4, 5 };
             BubbleSort(array);
             Console.WriteLine(string.Join(",", array));
+
+            List<string> list = new List<string>();
+            list.Sort();
         }
 
         static void BubbleSort(int[] array)

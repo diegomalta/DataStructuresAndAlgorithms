@@ -43,11 +43,28 @@ namespace MyAvlTree
 
             var balanceFactor = GetBalanceFactor(root);
             if (IsLeftHeavy(root))
+            {
                 Console.WriteLine($"Left - Node: {root.Value} Factor: {balanceFactor}");
+                if (GetBalanceFactor(root.Left) > 0)
+                {
+                    Console.WriteLine($"we need to do a Right Rotation: {GetBalanceFactor(root.Left)}");
+                }
+                else
+                {
+                    Console.WriteLine($"we need to do a Left-Right Rotation: {GetBalanceFactor(root.Left)}");
+                }
+            }                
             else if (IsRightHeavy(root))
             {
                 Console.WriteLine($"Right - Node: {root.Value} Factor: {balanceFactor}");
-                balanceFactor = GetBalanceFactor(root.Right);
+                if(GetBalanceFactor(root.Right) > 0)
+                {
+                    Console.WriteLine($"We need to do a Right-Left Rotation : {GetBalanceFactor(root.Right)}");
+                }
+                else
+                {
+                    Console.WriteLine($"We need to do a Left Rotation : {GetBalanceFactor(root.Right)}");
+                }
             }
                 
 
