@@ -13,5 +13,17 @@ namespace MostPopulatedYear
         {
 
         }
+
+        // will return the most populated year with the count 
+        public int GetMostPopulatedYear(List<Tuple<int,int>> yearList)
+        {
+
+            return 0;
+        }
+
+        public void SortList (List<Tuple<int, int>> yearList)
+        {
+            yearList.Sort();
+        }
     }
 }
