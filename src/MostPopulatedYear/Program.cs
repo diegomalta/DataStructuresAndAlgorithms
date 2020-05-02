@@ -7,11 +7,14 @@ namespace MostPopulatedYear
     {
         static void Main(string[] args)
         {
-            /*
-             *  1) sort the list in desc order 
-             *  2) go through yearList and use a helperList to keep the active person count
-             *  3) keeping a hashMap (year, count) with the numbers of active alive persons
-             *  4) we need to remove the person once pass the way from helperList 
+            /* 
+             *   Build a sorted Hash table to save the year and the count
+             *   1950 | 1
+             *   1803 | 2
+             *   1870 | -1
+             *   1922 | -1
+             *   
+             *   then updat the count of that hash table and get the max
              *     
              */
 
@@ -26,7 +29,7 @@ namespace MostPopulatedYear
             input.Add(new Tuple<int, int>(1894, 1921));
 
             var yearCount = new MostPopulatedYear();
-            yearCount.GetMostPopulatedYear(input);
+            Console.WriteLine(yearCount.GetMostPopulatedYear(input));
 
 
         }
