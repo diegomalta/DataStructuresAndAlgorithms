@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MostPopulatedYear", "MostPo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeetingScheduler", "MeetingScheduler\MeetingScheduler.csproj", "{887B02A9-6B62-4C2B-AD71-95032B890E75}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumbers", "PhoneNumbers\PhoneNumbers.csproj", "{4D461BC4-A250-41E0-B119-19D710B9EB82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,6 +225,18 @@ Global
 		{887B02A9-6B62-4C2B-AD71-95032B890E75}.Release|x64.Build.0 = Release|Any CPU
 		{887B02A9-6B62-4C2B-AD71-95032B890E75}.Release|x86.ActiveCfg = Release|Any CPU
 		{887B02A9-6B62-4C2B-AD71-95032B890E75}.Release|x86.Build.0 = Release|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Debug|x64.Build.0 = Debug|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Debug|x86.Build.0 = Debug|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Release|x64.ActiveCfg = Release|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Release|x64.Build.0 = Release|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D461BC4-A250-41E0-B119-19D710B9EB82}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
