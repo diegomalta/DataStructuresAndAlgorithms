@@ -11,11 +11,13 @@ namespace SortingAlgorithms
             var bubbleSort = new BubbleSort();
             var selectionSort = new SelectionSort();
             var insertionSort = new InsertionSort();
+            var mergeSort = new MergeSort();
 
             Console.WriteLine("NoSorted: " + string.Join(",", array));
             //bubbleSort.Sort(array);
             //selectionSort.Sort(array);
-            insertionSort.Sort(array);
+            //insertionSort.Sort(array);
+            mergeSort.Sort(array);
             Console.WriteLine("Sorted: " + string.Join(",", array));
         }
 
